@@ -4,7 +4,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="bg-eefLight shadow-sm border border-eefDark rounded-md mx-3 md:mx-12 mt-3 md:mt-6">
+    <nav className="bg-eefLight shadow-sm border border-eefDark rounded-md mx-3 md:mx-12">
       <div className="max-w-7xl mx-auto md:px-8 px-0">
         <div className="flex justify-between h-16 items-center md:px-0 px-4">
           <div className="md:hidden text-xl font-bold text-eefPrimary">
@@ -25,13 +25,13 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-32">
             <a
               href="#"
-              className="text-eefDark hover:bg-eefSecondary rounded-md p-2 font-medium"
+              className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
             >
               Home
             </a>
             <a
               href="#"
-              className="text-eefDark hover:bg-eefSecondary rounded-md p-2 font-medium"
+              className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
             >
               Projects
             </a>
@@ -46,13 +46,13 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-32">
             <a
               href="#"
-              className="text-eefDark hover:bg-eefSecondary rounded-md p-2 font-medium"
+              className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
             >
               Skills
             </a>
             <a
               href="#"
-              className="text-eefDark hover:bg-eefSecondary rounded-md p-2 font-medium"
+              className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
             >
               Contact
             </a>
