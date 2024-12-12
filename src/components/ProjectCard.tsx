@@ -7,9 +7,9 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="bg-eefLight border border-eefDark rounded-lg shadow-md p-4 flex flex-col justify-between">
+    <div className="bg-eefLight border border-eefDark rounded-lg p-4 flex flex-col justify-between w-full md:w-[640px] lg:w-[440px]">
       <div>
-        <div className="rounded-md overflow-hidden h-48">
+        <div className="rounded-md overflow-hidden h-64 lg:h-48">
           <img
             src={project.image}
             alt={project.title}
@@ -17,7 +17,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           />
         </div>
         <div className="my-4">
-          <h3 className="text-xl font-semibold text-gray-900">
+          <h3 className="text-xl font-semibold text-eefDark">
             {project.title}
           </h3>
           <div className="mt-4 flex flex-wrap gap-2 items-center">
@@ -44,7 +44,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         {project.github && (
           <a
             href={project.github}
-            className="inline-flex items-center text-eefDark border border-eefDark rounded-full px-4 py-2 hover:bg-eefDark hover:text-eefLight"
+            className="inline-flex items-center text-eefDark border border-eefDark rounded-full px-4 py-2 hover:bg-eefSecondary"
           >
             <Github className="w-5 h-5 mr-2" />
             GitHub

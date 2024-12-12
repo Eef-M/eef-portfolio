@@ -32,18 +32,4 @@ export const projects: Project[] = [
     github: 'https://github.com/Eef-M',
     link: '#'
   },
-  {
-    id: 3,
-    title: 'Coming Soon...',
-    description: 'Under construction...',
-    image: ComingSoon,
-    tags: skills
-        .filter(skill => ["SandTimer"].includes(skill.name))
-        .map(skill => ({
-            name: skill.name,
-            svg: skill.svg
-        })),
-    github: 'https://github.com/Eef-M',
-    link: '#'
-  }
 ];
