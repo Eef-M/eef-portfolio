@@ -1,4 +1,4 @@
-// import ContactForm from "./components/ContactForm";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -7,12 +7,12 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div className="min-h-screen theFont bg-white pt-3 md:pt-6">
+    <div className="min-h-screen bg-white pt-3 md:pt-6">
       <Navbar />
       <Hero />
       <Projects />
       <Skills />
-      {/* <ContactForm /> */}
+      <Contact />
       <Footer />
     </div>
   );

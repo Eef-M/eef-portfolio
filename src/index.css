@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.theFont {
+html {
+  scroll-behavior: smooth;
   font-family: "Space Grotesk", serif;
 }

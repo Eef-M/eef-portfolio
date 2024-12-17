@@ -1,12 +1,39 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const navbarClasses = `
+    fixed left-0 right-0 z-50 transition-all duration-500 ease-in-out
+    ${
+      isScrolled
+        ? "top-0 bg-eefLight/70"
+        : "mx-3 md:mx-12 rounded-md bg-eefLight border border-eefDark py-2 md:py-3"
+    }
+  `;
+
   return (
-    <nav className="bg-eefLight border border-eefDark rounded-md mx-3 md:mx-12">
+    <nav className={navbarClasses}>
       <div className="max-w-7xl mx-auto md:px-8 px-0">
-        <div className="flex justify-between h-16 items-center md:px-0 px-4">
+        <div className="flex justify-between items-center md:px-0 px-4">
           <div className="md:hidden text-xl font-bold text-eefPrimary">
             efmkllno
           </div>
@@ -15,7 +42,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-gray-600 hover:text-gray-900"
+              className="px-2 rounded-md text-gray-600 hover:text-gray-900"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -30,7 +57,7 @@ const Navbar = () => {
               Home
             </a>
             <a
-              href="#"
+              href="#projects"
               className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
             >
               Projects
@@ -45,13 +72,13 @@ const Navbar = () => {
           {/* Right Navigation */}
           <div className="hidden md:flex space-x-32">
             <a
-              href="#"
+              href="#skills"
               className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
             >
               Skills
             </a>
             <a
-              href="#"
+              href="#contact"
               className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
             >
               Contact
