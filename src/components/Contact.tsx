@@ -1,9 +1,18 @@
 import { Send } from "lucide-react";
+import { motion } from "motion/react";
 
 const Contact = () => {
   return (
     <section id="contact" className="mx-3 md:mx-12 mt-3 md:mt-6 py-8 md:py-16">
-      <div className="max-w-7xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, z: 100 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1, delay: 0.15, ease: "easeOut" },
+        }}
+        className="max-w-7xl mx-auto"
+      >
         <h2 className="text-3xl font-bold text-eefDark text-center">
           Let's Connect
         </h2>
@@ -49,7 +58,7 @@ const Contact = () => {
             </button>
           </div>
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 };
