@@ -5,11 +5,11 @@ const Skills = () => {
   return (
     <section id="skills" className="mx-3 md:mx-12 mt-3 md:mt-6 py-8 md:py-16">
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0, scale: 0 }}
         whileInView={{
           opacity: 1,
-          x: 0,
-          transition: { duration: 1, delay: 0.15, ease: "easeOut" },
+          scale: 1,
+          transition: { duration: 1, delay: 0.1, ease: "easeOut" },
         }}
         className="w-full mx-auto"
       >
