@@ -4,10 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        eefPrimary: "#87A922",
-        eefSecondary: "#FCDC2A",
-        eefLight: "#F7F6BB",
-        eefDark: "#114232",
+        eefPrimary: "#474F7A",
+        eefSecondary: "#81689D",
+        eefAccent: "#1F2544",
       },
     },
   },

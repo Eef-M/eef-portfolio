@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="mx-3 md:mx-12 mt-3 md:mt-6 py-8 md:py-16">
+    <section id="contact" className="py-24 px-4 md:px-12">
       <motion.div
         initial={{ opacity: 0, z: 100 }}
         whileInView={{
@@ -13,10 +13,10 @@ const Contact = () => {
         }}
         className="max-w-7xl mx-auto"
       >
-        <h2 className="text-3xl font-bold text-eefDark text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-eefAccent text-center">
           Let's Connect
         </h2>
-        <p className="mt-4 text-xl text-eefPrimary text-center max-w-2xl mx-auto">
+        <p className="mt-4 text-md md:text-lg text-eefPrimary text-center max-w-2xl mx-auto">
           I'm always open to new opportunities and interesting projects
         </p>
 
@@ -26,7 +26,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
-                className="block w-full rounded-md border-2 border-eefDark bg-eefLight px-4 py-2 placeholder:text-eefPrimary"
+                className="block w-full rounded-md border-2 border-eefPrimary bg-transparent px-4 py-2 placeholder:text-eefSecondary"
                 placeholder="Name"
               />
             </div>
@@ -35,7 +35,7 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
-                className="block w-full rounded-md border-2 border-eefDark bg-eefLight px-4 py-2 placeholder:text-eefPrimary"
+                className="block w-full rounded-md border-2 border-eefPrimary bg-transparent px-4 py-2 placeholder:text-eefSecondary"
                 placeholder="Email"
               />
             </div>
@@ -44,14 +44,14 @@ const Contact = () => {
               <textarea
                 id="message"
                 rows={4}
-                className="block w-full rounded-md border-2 border-eefDark bg-eefLight px-4 py-2 placeholder:text-eefPrimary"
+                className="block w-full rounded-md border-2 border-eefPrimary bg-transparent px-4 py-2 placeholder:text-eefSecondary"
                 placeholder="Message"
               />
             </div>
 
             <button
               type="submit"
-              className="flex justify-center items-center rounded-md bg-eefPrimary text-eefLight py-3 gap-2 font-medium hover:bg-eefDark"
+              className="flex justify-center items-center rounded-md bg-eefPrimary text-white py-3 gap-2 font-medium hover:bg-eefAccent transition duration-300 ease-in-out"
             >
               <Send className="w-5 h-5" />
               Send

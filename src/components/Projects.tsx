@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const Projects = () => {
   return (
-    <section id="projects" className="mx-3 md:mx-12 mt-3 md:mt-6 py-8 md:py-16">
+    <section id="projects" className="py-24 px-4 md:px-12">
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{
@@ -14,7 +14,7 @@ const Projects = () => {
         }}
         className="w-full mx-auto"
       >
-        <h2 className="text-3xl font-bold text-eefDark text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-eefAccent text-center">
           My Projects
         </h2>
         <div className="flex flex-wrap justify-center gap-x-16 gap-y-6 md:gap-y-8 mt-8">

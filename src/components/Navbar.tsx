@@ -25,8 +25,8 @@ const Navbar = () => {
     fixed left-0 right-0 z-50 transition-all duration-500 ease-in-out
     ${
       isScrolled
-        ? "top-0 bg-eefLight/70"
-        : "mx-3 md:mx-12 rounded-md bg-eefLight border border-eefDark py-2 md:py-3"
+        ? "top-0 bg-white/40 backdrop-blur-md"
+        : "mx-3 md:mx-12 rounded-lg bg-white/40 backdrop-blur-md py-2 md:py-3"
     }
   `;
 
@@ -34,7 +34,7 @@ const Navbar = () => {
     <nav className={navbarClasses}>
       <div className="max-w-7xl mx-auto md:px-8 px-0">
         <div className="flex justify-between items-center md:px-0 px-4">
-          <div className="md:hidden text-xl font-bold text-eefPrimary">
+          <div className="md:hidden text-xl font-bold text-eefAccent">
             efmkllno
           </div>
 
@@ -42,7 +42,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="px-2 rounded-md text-gray-600 hover:text-gray-900"
+              className="px-2 rounded-md text-eefAccent"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -52,13 +52,13 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-32">
             <a
               href="#"
-              className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
+              className="text-eefPrimary hover:text-eefSecondary rounded-md p-2 font-medium transition duration-300 ease-in-out"
             >
               Home
             </a>
             <a
               href="#projects"
-              className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
+              className="text-eefPrimary hover:text-eefSecondary rounded-md p-2 font-medium transition duration-300 ease-in-out"
             >
               Projects
             </a>
@@ -73,13 +73,13 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-32">
             <a
               href="#skills"
-              className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
+              className="text-eefPrimary hover:text-eefSecondary rounded-md p-2 font-medium transition duration-300 ease-in-out"
             >
               Skills
             </a>
             <a
               href="#contact"
-              className="text-eefDark hover:text-eefPrimary rounded-md p-2 font-medium"
+              className="text-eefPrimary hover:text-eefSecondary rounded-md p-2 font-medium transition duration-300 ease-in-out"
             >
               Contact
             </a>
@@ -93,25 +93,25 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
               href="#about"
-              className="block px-3 py-2 text-eefDark hover:bg-eefSecondary font-medium"
+              className="block px-3 py-2 text-eefLight font-medium"
             >
               About
             </a>
             <a
               href="#projects"
-              className="block px-3 py-2 text-eefDark hover:bg-eefSecondary font-medium"
+              className="block px-3 py-2 text-eefLight font-medium"
             >
               Projects
             </a>
             <a
               href="#skills"
-              className="block px-3 py-2 text-eefDark hover:bg-eefSecondary font-medium"
+              className="block px-3 py-2 text-eefLight font-medium"
             >
               Skills
             </a>
             <a
               href="#contact"
-              className="block px-3 py-2 text-eefDark hover:bg-eefSecondary font-medium"
+              className="block px-3 py-2 text-eefLight font-medium"
             >
               Contact
             </a>
